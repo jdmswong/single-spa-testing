@@ -7,22 +7,25 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   build: {
     rollupOptions: {
-      preserveEntrySignatures: true,
-      input: "src/application-root-config.js",
-      output: {
-        format: "system",
-        entryFileNames: "src/[name].js",
-      },
-      external: ["react", "systenjs"],
+      // preserveEntrySignatures: true,
+      // input: "src/index.js",
+      // output: {
+      //   format: "system",
+      //   entryFileNames: "[name].js",
+      // },
+      // external: ["react", "systemjs"],
+      input: 'src/index.js',
+      format: 'system',
+      preserveEntrySignatures: true
     },
   },
-  lib: {
-    entry: resolve(__dirname, "src/application-root-config.js"),
-  },
+  // lib: {
+  //   entry: resolve(__dirname, "src/index.js"),
+  // },
   plugins: [react(), basicSsl()],
-  server: {
-    https: false,
-  },
+  // server: {
+  //   https: false,
+  // },
   // resolve: {
   //   alias: [
   //     {
