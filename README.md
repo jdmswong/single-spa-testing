@@ -27,9 +27,9 @@ This will serve the build at http://localhost:4173
 In the root-config of your single-spa root application, you can then register this application via:
 
 ```
-// Register a preact web app running through vite
+// Register a react web app running through vite
 registerApplication({
-  name: "preact",
+  name: "react",
   app: () =>
   System.import('http://127.0.0.1:4173/src/application-root-config.js'),
   activeWhen: ["/"],

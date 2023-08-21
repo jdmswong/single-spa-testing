@@ -1,7 +1,7 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
-import preact from "@preact/preset-vite";
 import basicSsl from "@vitejs/plugin-basic-ssl";
+import react from 'vite-preset-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,13 +13,14 @@ export default defineConfig({
         format: "system",
         entryFileNames: "src/[name].js",
       },
-      external: ["preact", "systenjs"],
+      external: ["react", "systenjs"],
     },
   },
   lib: {
     entry: resolve(__dirname, "src/application-root-config.js"),
   },
-  plugins: [preact(), basicSsl()],
+  plugins: [ basicSsl()],
+  // plugins: [react(), basicSsl()],
   server: {
     https: false,
   },

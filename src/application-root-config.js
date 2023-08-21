@@ -1,9 +1,9 @@
-import preact from "preact";
+import react from "react";
 import { App } from "./app";
-import singleSpaPreact from "single-spa-preact";
+import singleSpaReact from "single-spa-react";
 
-const preactLifecycles = singleSpaPreact({
-  preact,
+const preactLifecycles = singleSpaReact({
+  react,
   rootComponent: App,
 });
 
