@@ -1,7 +1,7 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import basicSsl from "@vitejs/plugin-basic-ssl";
-import react from 'vite-preset-react';
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,8 +19,7 @@ export default defineConfig({
   lib: {
     entry: resolve(__dirname, "src/application-root-config.js"),
   },
-  plugins: [ basicSsl()],
-  // plugins: [react(), basicSsl()],
+  plugins: [react(), basicSsl()],
   server: {
     https: false,
   },

@@ -9,13 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vitejs/plugin-react": "^4.0.4",
     "preact": "^10.10.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "single-spa": "^5.9.4",
     "single-spa-preact": "^1.1.0",
-    "single-spa-react": "^5.1.4",
-    "vite-preset-react": "^2.3.0"
+    "single-spa-react": "^5.1.4"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.3.0",
